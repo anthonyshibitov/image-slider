@@ -1,0 +1,80 @@
+.image-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-viewbox {
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-arrow,
+.right-arrow {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.left-arrow {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-arrow {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pictures {
+    height: 500px;
+    width: 1500px;
+    display: flex;
+    transition: 0.3s ease-in-out;
+}
+
+.picture-frame {
+    height: 500px;
+    width: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.picture-frame:nth-child(1) {
+    background-image: url("lena.png");
+}
+
+.picture-frame:nth-child(2) {
+    background-image: url("cat_walk.png");
+}
+
+.picture-frame:nth-child(3) {
+    background-image: url("dog.jpg");
+}
+
+.image-circles {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    gap: 20px;
+}
+
+.image-circle {
+    background-color: white;
+    border: 1px solid black;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+}
