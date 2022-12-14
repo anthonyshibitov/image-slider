@@ -1,6 +1,13 @@
 console.log("test!");
 
 let index = 0;
+let direction = -1;
+
+let timeOut = setInterval(() => {
+    if (index == -1000) direction = 1;
+    if (index == 0) direction = -1;
+    moveFrame(500 * direction);
+}, 5000);
 
 const leftArrowButton = document.querySelector(".left-arrow");
 const rightArrowButton = document.querySelector(".right-arrow");
@@ -9,10 +16,12 @@ const circles = document.querySelectorAll(".image-circle");
 circles[0].style.backgroundColor = "red";
 
 leftArrowButton.addEventListener("click", () => {
+    clearInterval(timeOut);
     moveFrame(500);
 });
 
 rightArrowButton.addEventListener("click", () => {
+    clearInterval(timeOut);
     moveFrame(-500);
 });
 
